@@ -1,0 +1,25 @@
+name:                ghc-profiler-json
+version:             0.1.0.0
+synopsis:            A small library for parsing JSON profiles from GHC's cost-center profiler
+-- description:         
+homepage:            https://github.com/bgamari/ghc-profiler-json
+license:             BSD3
+license-file:        LICENSE
+author:              Ben Gamari
+maintainer:          ben@smart-cactus.org
+copyright:           (c) 2017 Ben Gamari
+category:            Development
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+library
+  exposed-modules:     GHC.CCS.JSON
+  other-extensions:    GeneralizedNewtypeDeriving, OverloadedStrings
+  build-depends:       base >=4.9 && <4.10,
+                       hashable >=1.2 && <1.3,
+                       aeson >=1.0 && <1.1,
+                       text >=1.2 && <1.3,
+                       containers >=0.5 && <0.6
+  hs-source-dirs:      src
+  default-language:    Haskell2010
